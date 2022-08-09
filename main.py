@@ -50,6 +50,7 @@ while not end_of_game:
     
     
     
+
 import random
 import hangman_words
 from hangman_words import word_list
@@ -74,6 +75,8 @@ for _ in range(word_length):
     display += "_"
 while not end_of_game:
     guess = input("Guess a letter: ").lower()
+    if guess in display:
+      print(f"you already guessed {guess}")
     for position in range(word_length):
         letter = chosen_word[position] 
         if letter == guess:
