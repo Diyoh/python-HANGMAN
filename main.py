@@ -145,5 +145,7 @@ while not game_is_finished:
     if not "_" in display:
         game_is_finished = True
         print("You win.")
+        
+       
 
     print(stages[lives])
